@@ -1,19 +1,19 @@
-const express = require('express')
+const express = require("express")
 const app = express()
 const port = process.env.PORT || 5000;
 
 require("./db");
 
-//var cors = require("cors");
-//app.use(cors());
+var cors = require("cors");
+app.use(cors());
 app.use(express.json());
 
-const userRoute = require("./routes/users");
+const contactRoute = require("./routes/contacts");
 
-app.use("/api/users", userRoute);
+app.use("/api/contacts", contactRoute);
 
-app.get('/', (req, res) => {
-  res.send('Welcome contacts-vault-api')
+app.get("/", (req, res) => {
+  res.send("Welcome contacts-vault-api by HeikkiT")
 
 })
 

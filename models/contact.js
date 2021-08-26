@@ -1,10 +1,8 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 const Schema = mongoose.Schema
-//import validator from 'validator';
-//const validator = require('validator')
 
-//Schema of the user
-const userSchema = new Schema(
+//Schema of the contact
+const contactSchema = new Schema(
     {
         firstName: {
             type: String,
@@ -24,14 +22,6 @@ const userSchema = new Schema(
     }
 );
 
-const User = mongoose.model('User', userSchema)
-//export const User = mongoose.model('User', userSchema);
+const User = mongoose.model("Contact", contactSchema)
 
 module.exports = User
-
-/*
-export default {
-  User,
-  userSchema,
-};
-*/
